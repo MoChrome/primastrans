@@ -37,6 +37,21 @@
 
 <main id="main">
 
+  <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{ asset('img/clients/client-1.png') }}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+
   <!-- ======= Get Started Section ======= -->
   <section id="get-started" class="get-started section-bg">
     <div class="container">
