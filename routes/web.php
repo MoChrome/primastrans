@@ -43,6 +43,14 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return view('contact', [
+        "title" => "Contact",
+        "profile" => Company::all()
+
+    ]);
+});
+
 // single services
 
 Route::get('services/{slug}', function ($slug) {

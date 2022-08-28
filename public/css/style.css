@@ -996,7 +996,7 @@ section {
 .projects .portfolio-content .portfolio-info .preview-link,
 .projects .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px);
+  left: 50%;
   font-size: 26px;
   top: calc(50% - 14px);
   color: #fff;
@@ -1673,137 +1673,6 @@ section {
   font-size: 20px;
   margin-right: 8px;
   color: var(--color-primary);
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 20px 0 30px 0;
-}
-
-.contact .info-item i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
-  line-height: 0;
-  color: var(--color-primary);
-  border-radius: 50%;
-  border: 2px dotted #ffd565;
-}
-
-.contact .info-item h3 {
-  font-size: 20px;
-  color: #6c757d;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 20px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2714,4 +2583,101 @@ section {
 
 .footer .footer-legal .credits a {
   color: var(--color-primary);
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?fcd7fw');
+  src:  url('../fonts/icomoon.eot?fcd7fw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?fcd7fw') format('truetype'),
+    url('../fonts/icomoon.woff?fcd7fw') format('woff'),
+    url('../fonts/icomoon.svg?fcd7fw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.dump {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dump-dump-truck:before {
+  content: "\e900";
+  font-size: 36px;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contacts .contact-item {
+  padding: 40px;
+  background: #fff;
+  height: 100%;
+}
+
+.contacts .contact-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.contacts .contact-item .icon i {
+  color: var(--color-secondary);
+  font-size: 40px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contacts .contact-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 120%;
+  width: 120%;
+  background: #f0f1f2;
+  border-radius: 50px;
+  z-index: 1;
+  top: 7px;
+  transition: 0.3s;
+}
+
+.contacts .contact-item h3 {
+  color: var(--color-default);
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  font-size: 22px;
+  position: relative;
+  border-bottom: 4px solid #ebebed;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.contacts .contact-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+}
+
+.contacts .contact-item:hover .icon:before {
+  background: var(--color-primary);
+}
+
+.contacts .contact-item:hover h3 {
+  border-color: var(--color-primary);
 }
