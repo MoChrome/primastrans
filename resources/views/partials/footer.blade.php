@@ -6,7 +6,7 @@
           <div class="col-lg-8 col-md-6 d-flex align-items-center justify-content-center">
             <div class="footer-info">
               
-              <h3>{{ $profile['name'] }}</h3>
+              <h3 style="text-align: center">{{ $profile['name'] }}</h3>
               <div class="d-flex align-items-center justify-content-center">
                 <p>
                   {{ $profile['address'] }}

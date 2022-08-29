@@ -807,6 +807,12 @@ section {
   margin-bottom: 0;
 }
 
+.services .service-item ul li {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
 .services .service-item .readmore {
   margin-top: 15px;
   display: inline-block;
@@ -2679,5 +2685,69 @@ section {
 }
 
 .contacts .contact-item:hover h3 {
+  border-color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+# servs Section
+--------------------------------------------------------------*/
+.servs .serv-item {
+  padding: 40px;
+  background: #fff;
+  height: 100%;
+}
+
+.servs .serv-item .icon {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.servs .serv-item .icon i {
+  color: var(--color-secondary);
+  font-size: 40px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.servs .serv-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 120%;
+  width: 120%;
+  background: #f0f1f2;
+  border-radius: 50px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.servs .serv-item h3 {
+  color: var(--color-default);
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  font-size: 22px;
+  position: relative;
+  border-bottom: 4px solid #ebebed;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.servs .serv-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+}
+
+.servs .serv-item:hover .icon:before {
+  background: var(--color-primary);
+}
+
+.servs .serv-item:hover h3 {
   border-color: var(--color-primary);
 }
