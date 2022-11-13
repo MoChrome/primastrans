@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PRIMASTRANS | {{ $title }}</title>
+    <title>PRIMASTRANS TRI MANDIRI</title>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -27,17 +27,13 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 
 </head>
 
 <body>
-
-    @include('partials.navbar')
+    {{-- @include('partials.landingnavbar') --}}
     @yield('container')
-    @include('partials.footer')
-
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
 
     <div id="preloader"></div>
     <!-- Vendor JS Files -->
@@ -51,6 +47,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/landing.js') }}"></script>
 </body>
 
 </html>

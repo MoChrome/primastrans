@@ -1,14 +1,15 @@
 @extends('layouts.main')
 
 @section('container')
-@include('partials/breadcrumbs')
+    @include('partials/breadcrumbs')
     <section id="contacts" class="contacts section-bg">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
                 <h2>Kontak Kami</h2>
-                <p>Untuk pemesanan silahkan kunjungi kantor kami di alamat berikut atau hubungi kami melalui telepon atau email</p>
+                <p>Untuk pemesanan silahkan kunjungi kantor kami di alamat berikut atau hubungi kami melalui telepon atau
+                    email</p>
             </div>
-            <div class="row justify-content-around" data-aos="fade-up" data-aos-delay="100">     
+            <div class="row justify-content-around" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-4 col-md-4">
                     <div class="contact-item">
                         <div class="d-flex justify-content-center">
@@ -33,8 +34,8 @@
                         <div class="row">
                             <div class="col">
                                 <p>
-                                {{ $profile['contact'] }}<br>
-                                {{ $profile['contact2'] }}
+                                    {{ $profile['contact'] }}<br>
+                                    {{ $profile['contact2'] }}
                                 </p>
                             </div>
                         </div>
@@ -52,7 +53,7 @@
                         <div class="row">
                             <div class="col">
                                 <p>
-                                {{ $profile['email'] }}
+                                    {{ $profile['email'] }}
                                 </p>
                             </div>
                         </div>

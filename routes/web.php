@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\Company;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +19,14 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 */
 
 Route::get('/', function () {
+    return view('landing', [
+        "title" => "Landing",
+        "profile" => Company::all()
+    ]);
+});
+
+
+Route::get('/transport', function () {
     return view('home', [
         "title" => "Home",
         "profile" => Company::all()
@@ -25,7 +35,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/services', function () {
+Route::get('/transport/services', function () {
 
     return view('services', [
         "title" => "Services",
@@ -35,7 +45,7 @@ Route::get('/services', function () {
 });
 
 
-Route::get('/about', function () {
+Route::get('/transport/about', function () {
     return view('about', [
         "title" => "About",
         "profile" => Company::all()
@@ -43,7 +53,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/contact', function () {
+Route::get('/transport/contact', function () {
     return view('contact', [
         "title" => "Contact",
         "profile" => Company::all()
@@ -51,12 +61,16 @@ Route::get('/contact', function () {
     ]);
 });
 
-// single services
+// Multi Post
 
-Route::get('services/{slug}', function ($slug) {
+Route::get('/property', [PostController::class, 'index']);
 
-    return view('post', [
-        "title" => "Single Post",
-        "post" => Post::find($slug)
-    ]);
-});
+Route::get('/property/categories', [PostController::class, 'categories']);
+
+// Single Post
+
+Route::get('/property/{post:slug}', [PostController::class, 'show']);
+
+// Single Category
+
+Route::get('/property/categories/{category:slug}', [PostController::class, 'category']);
